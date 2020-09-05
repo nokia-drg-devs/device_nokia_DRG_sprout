@@ -168,7 +168,9 @@ PRIVATE_EXCLUDE_BUILD_TEST := true
 
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor Security Patch Level
 VENDOR_SECURITY_PATCH := 2020-03-01
