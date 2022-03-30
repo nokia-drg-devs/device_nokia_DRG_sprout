@@ -17,28 +17,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from DRG_sprout device
+$(call inherit-product, device/nokia/DRG_sprout/device.mk)
+
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from  device
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
-# Set Shipping API level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
-
-# Boot Animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 2280
-
 PRODUCT_BRAND := Nokia
 PRODUCT_DEVICE := DRG_sprout
-PRODUCT_MANUFACTURER := HMD Global
-PRODUCT_NAME := lineage_DRG_sprout
+PRODUCT_MANUFACTURER := Nokia
 PRODUCT_MODEL := Nokia 6.1 Plus
+PRODUCT_NAME := lineage_DRG_sprout
 
 PRODUCT_GMS_CLIENTID_BASE := android-hmd
-
-TARGET_VENDOR := nokia
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=Dragon_00WW \
